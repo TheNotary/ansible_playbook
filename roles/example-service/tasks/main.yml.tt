@@ -5,4 +5,5 @@
     dest: "{{ item }}"
   with_items:
     - /etc/systemd/system/example-service.service
-  notify: restart example-service
+  notify:
+    - restart example-service

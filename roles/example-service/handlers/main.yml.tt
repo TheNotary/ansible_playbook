@@ -1,5 +1,7 @@
 ---
 - name: restart example-service
-  service:
+  systemd:
     name: example-service
     state: restarted
+    enabled: yes
+    daemon_reload: yes
