@@ -5,3 +5,10 @@
     state: restarted
     enabled: yes
     daemon_reload: yes
+
+- name: stop and disable example-service
+  systemd:
+    name: example-service
+    state: stopped
+    enabled: no
+    daemon_reload: yes

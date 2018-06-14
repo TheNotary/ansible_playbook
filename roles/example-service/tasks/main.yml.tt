@@ -5,5 +5,9 @@
     dest: "{{ item }}"
   with_items:
     - /etc/systemd/system/example-service.service
-  notify:
-    - restart example-service
+  notify: restart example-service
+
+# Uncomment this stanza to 'undo' the service and have it switched off
+# -  name: trigger nginx-restart
+#    command: /bin/true
+#    notify: stop and disable example-service
