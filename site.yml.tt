@@ -2,6 +2,8 @@
 - hosts: rock
   become: true
   become_method: sudo
+  vars:
+    ansible_variable: ANSIBLE_VARIABLE
 
   roles:
     - java
