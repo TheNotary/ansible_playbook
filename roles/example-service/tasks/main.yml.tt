@@ -1,0 +1,8 @@
+---
+- name: install example-service systemd unit file
+  template:
+    src: .{{ item }}.j2
+    dest: "{{ item }}"
+  with_items:
+    - /etc/systemd/system/example-service.service
+  notify: restart example-service

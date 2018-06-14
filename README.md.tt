@@ -1,5 +1,24 @@
 # Ansible Playbook
 
+## Configure
+
+Just remember to change the `HOSTNAME` to an actual hostname of a machine you'd like configured:
+
+```
+vi site.yml
+```
+
+Then you just use `ansible-playbook` to provision that machine.
+
+```
+ansible-playbook site.yml
+```
+
+Note:  You will also need to add this host to your inventory in some way (I find this step annoying...)
+
+```
+vi /etc/ansible/hosts
+```
 
 
 ## References

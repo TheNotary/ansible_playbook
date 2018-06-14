@@ -1,0 +1,12 @@
+# Example systemd unit file
+
+[Unit]
+Description=Example Service
+Documentation=http://github.com
+
+[Service]
+Type=simple
+PIDFile=/tmp/aacdsks_example_service.pid
+ExecStart=/bin/bash -c 'COUNT=0; while true; do  COUNT=$$(expr 1 + $${COUNT}) ; echo "$${COUNT}" >> /tmp/count ; sleep 6 ; done'
+ExecStop=/bin/kill -9 `cat /tmp/aacdsks_example_service.pid`
+Restart=on-failure

@@ -1,0 +1,5 @@
+---
+- name: restart example-service
+  service:
+    name: example-service
+    state: restarted
