@@ -21,6 +21,14 @@ vi /etc/ansible/hosts
 ```
 
 
+## Hints
+
+To run only roles you're currently developing (by default, the java role is setup this way):
+
+```
+ansible-playbook site.yml --tags current -vvvvv
+```
+
 ## References
 
 - [Anatomy](http://www.oznetnerd.com/anatomy-ansible-playbook/)

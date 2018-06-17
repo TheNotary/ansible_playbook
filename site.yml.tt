@@ -1,10 +1,10 @@
 ---
-- hosts: rock
+- hosts: HOSTNAME
   become: true
   become_method: sudo
   vars:
     ansible_variable: ANSIBLE_VARIABLE
 
   roles:
-    - java
+    - { role: 'java', tags: 'current' }
     - example-service
