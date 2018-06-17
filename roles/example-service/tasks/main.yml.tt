@@ -1,4 +1,10 @@
 ---
+
+- name:
+  debug:
+    msg: I'm debug output
+  tags: current
+
 - name: install example-service systemd unit file
   template:
     src: .{{ item }}.j2
